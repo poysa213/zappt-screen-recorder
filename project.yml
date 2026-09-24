@@ -1,0 +1,65 @@
+name: Zappt
+options:
+  bundleIdPrefix: com.zappt
+  deploymentTarget:
+    macOS: "14.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+    PRODUCT_BUNDLE_IDENTIFIER: com.zappt.Zappt
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    ENABLE_HARDENED_RUNTIME: NO
+    CODE_SIGN_IDENTITY: "-"
+    CODE_SIGNING_REQUIRED: NO
+    CODE_SIGNING_ALLOWED: NO
+    DEAD_CODE_STRIPPING: YES
+    COMBINE_HIDPI_IMAGES: YES
+
+targets:
+  Zappt:
+    type: application
+    platform: macOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: Zappt
+    settings:
+      base:
+        INFOPLIST_FILE: Zappt/Resources/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ENABLE_PREVIEWS: YES
+        SWIFT_EMIT_LOC_STRINGS: YES
+        LD_RUNPATH_SEARCH_PATHS:
+          - "@executable_path/../Frameworks"
+
+  ZapptTests:
+    type: bundle.unit-test
+    platform: macOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: ZapptTests
+    dependencies:
+      - target: Zappt
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.zappt.ZapptTests
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/Zappt.app/Contents/MacOS/Zappt"
+        BUNDLE_LOADER: "$(TEST_HOST)"
+
+schemes:
+  Zappt:
+    build:
+      targets:
+        Zappt: all
+        ZapptTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      gatherCoverageData: true
+      targets:
+        - ZapptTests
