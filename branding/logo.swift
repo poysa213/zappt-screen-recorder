@@ -140,3 +140,5 @@ func wordmark(textColor: CGColor, mark: CGColor) -> NSBitmapImageRep {
 }
 write(wordmark(textColor: dark, mark: indigo), "wordmark-light.png")
 write(wordmark(textColor: white, mark: white), "wordmark-dark.png")
+// Brand-colored lockup that reads on both light and dark backgrounds.
+write(wordmark(textColor: indigo, mark: indigo), "wordmark.png")
