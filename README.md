@@ -1,6 +1,8 @@
 <p align="center">
-  <img src="branding/wordmark-light.png#gh-light-mode-only" width="300" alt="Zappt">
-  <img src="branding/wordmark-dark.png#gh-dark-mode-only" width="300" alt="Zappt">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="branding/wordmark-dark.png">
+    <img src="branding/wordmark-light.png" width="300" alt="Zappt">
+  </picture>
 </p>
 
 <p align="center">A native macOS screen recorder. Fast, local, no account.</p>
