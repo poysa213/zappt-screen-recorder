@@ -13,11 +13,11 @@
 
 ## Download
 
-**[Download Zappt (.dmg)](https://github.com/poysa213/zappt/releases/latest/download/Zappt.dmg)** — universal (Apple Silicon + Intel), signed and notarized.
+**[Download Zappt (.dmg)](https://github.com/poysa213/zappt-screen-recorder/releases/latest/download/Zappt.dmg)** — universal (Apple Silicon + Intel), signed and notarized.
 
 Open the DMG and drag Zappt to Applications. macOS asks for Screen Recording, Camera, and Microphone access on first use.
 
-Latest: **v1.0** · [all releases](https://github.com/poysa213/zappt/releases)
+Latest: **v1.0** · [all releases](https://github.com/poysa213/zappt-screen-recorder/releases)
 
 ## Features
 
